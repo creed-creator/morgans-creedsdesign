@@ -19,9 +19,7 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
-
   body {
     font-family: 'Inter', sans-serif;
     background: var(--dark);
@@ -68,7 +66,6 @@
     transition: color 0.25s;
   }
   .nav-links a:hover { color: var(--gold); }
-
   .hamburger {
     display: none;
     flex-direction: column;
@@ -96,7 +93,6 @@
     align-items: center;
     justify-content: center;
   }
-
   .hero-slide {
     position: absolute;
     inset: 0;
@@ -104,13 +100,11 @@
     background-position: center;
     opacity: 0;
     animation: kenBurns 24s ease-in-out infinite;
-    transform-origin: center;
   }
   .hero-slide:nth-child(1) { animation-delay: 0s; }
   .hero-slide:nth-child(2) { animation-delay: 6s; }
   .hero-slide:nth-child(3) { animation-delay: 12s; }
   .hero-slide:nth-child(4) { animation-delay: 18s; }
-
   @keyframes kenBurns {
     0%   { opacity: 0; transform: scale(1.08); }
     8%   { opacity: 1; }
@@ -118,18 +112,11 @@
     33%  { opacity: 0; transform: scale(0.98); }
     100% { opacity: 0; transform: scale(1.08); }
   }
-
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.15) 0%,
-      rgba(0,0,0,0.5) 50%,
-      rgba(0,0,0,0.75) 100%
-    );
+    background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.75) 100%);
   }
-
   .hero-content {
     position: relative;
     z-index: 2;
@@ -142,7 +129,6 @@
     from { opacity: 0; transform: translateY(40px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-
   .hero-badge {
     display: inline-block;
     font-size: 0.72rem;
@@ -162,10 +148,7 @@
     color: #fff;
     margin-bottom: 0.8rem;
   }
-  .hero h1 em {
-    font-style: italic;
-    color: var(--gold);
-  }
+  .hero h1 em { font-style: italic; color: var(--gold); }
   .hero-sub {
     font-size: clamp(0.95rem, 2vw, 1.15rem);
     font-weight: 300;
@@ -187,10 +170,7 @@
     text-decoration: none;
     transition: background 0.25s, transform 0.25s;
   }
-  .hero-cta:hover {
-    background: #e4b85a;
-    transform: translateY(-2px);
-  }
+  .hero-cta:hover { background: #e4b85a; transform: translateY(-2px); }
 
   /* ─── STATS ─── */
   .stats {
@@ -220,10 +200,9 @@
     margin-top: 0.4rem;
   }
 
-  /* ─── SECTION BASE ─── */
+  /* ─── SECTIONS ─── */
   section { padding: 6rem 2rem; }
   .section-inner { max-width: 1100px; margin: 0 auto; }
-
   .section-eyebrow {
     font-size: 0.72rem;
     letter-spacing: 0.22em;
@@ -247,16 +226,13 @@
     max-width: 600px;
   }
 
-  /* reveal animation */
+  /* reveal */
   .reveal {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.7s ease, transform 0.7s ease;
   }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
 
   /* ─── ABOUT ─── */
   .about-grid {
@@ -265,9 +241,7 @@
     gap: 4rem;
     align-items: center;
   }
-  .about-img-frame {
-    position: relative;
-  }
+  .about-img-frame { position: relative; }
   .about-img-frame img {
     width: 100%;
     aspect-ratio: 4/3;
@@ -277,10 +251,8 @@
   .about-img-frame::after {
     content: '';
     position: absolute;
-    bottom: -16px;
-    right: -16px;
-    width: 70%;
-    height: 70%;
+    bottom: -16px; right: -16px;
+    width: 70%; height: 70%;
     border: 2px solid var(--gold);
     z-index: -1;
   }
@@ -309,33 +281,24 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
-  .feature-card p {
-    font-size: 0.8rem;
-    color: var(--muted);
-    line-height: 1.5;
-  }
+  .feature-card p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
 
   /* ─── GALLERY ─── */
   .gallery-section { background: var(--charcoal); }
   .gallery-mosaic {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
     gap: 8px;
     margin-top: 2.5rem;
   }
-  .gal-item {
-    overflow: hidden;
-  }
+  .gal-item { overflow: hidden; }
   .gal-item img {
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     object-fit: cover;
     display: block;
     transition: transform 0.5s ease;
   }
   .gal-item:hover img { transform: scale(1.06); }
-
   .gal-item:nth-child(1) { grid-column: span 5; grid-row: span 2; min-height: 300px; }
   .gal-item:nth-child(2) { grid-column: span 4; min-height: 145px; }
   .gal-item:nth-child(3) { grid-column: span 3; min-height: 145px; }
@@ -363,20 +326,18 @@
     border-bottom: 2px solid transparent;
     transition: all 0.25s;
     background: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border-top: none; border-left: none; border-right: none;
     font-family: 'Inter', sans-serif;
   }
   .menu-tab:hover { color: var(--text); }
-  .menu-tab.active {
-    color: var(--gold);
-    border-bottom-color: var(--gold);
-  }
-
+  .menu-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
   .menu-panel { display: none; }
-  .menu-panel.active { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1px; background: rgba(255,255,255,0.06); }
-
+  .menu-panel.active {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+  }
   .menu-card {
     background: var(--charcoal);
     padding: 1.4rem 1.6rem;
@@ -384,15 +345,6 @@
     transition: background 0.25s;
   }
   .menu-card:hover { background: var(--mid); }
-  .menu-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 1.6rem;
-    right: 1.6rem;
-    height: 1px;
-    background: rgba(255,255,255,0.06);
-  }
   .menu-card-header {
     display: flex;
     justify-content: space-between;
@@ -419,17 +371,10 @@
     white-space: nowrap;
     margin-left: 1rem;
   }
-  .menu-card-desc {
-    font-size: 0.8rem;
-    color: var(--muted);
-    line-height: 1.5;
-  }
+  .menu-card-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
 
   /* ─── QUOTE ─── */
-  .quote-section {
-    background: var(--mid);
-    text-align: center;
-  }
+  .quote-section { background: var(--mid); text-align: center; }
   .quote-text {
     font-family: 'Playfair Display', serif;
     font-size: clamp(1.5rem, 3.5vw, 2.4rem);
@@ -442,41 +387,47 @@
   }
   .quote-text::before { content: '\201C'; color: var(--gold); }
   .quote-text::after  { content: '\201D'; color: var(--gold); }
-  .quote-attr {
-    font-size: 0.8rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
+  .quote-attr { font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
   .quote-attr span { color: var(--gold); }
 
-  /* ─── CONTACT ─── */
-  .contact-grid {
+  /* ─── CONTACT / HOURS ─── */
+  .hours-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
     margin-top: 2.5rem;
+  }
+  .hour-row {
+    background: var(--charcoal);
+    padding: 1.1rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .hour-day { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .hour-time { font-size: 0.9rem; color: var(--text); }
+
+  .contact-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
   }
   .contact-card {
     background: var(--charcoal);
-    padding: 2rem;
+    padding: 1.6rem 2rem;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  .contact-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-  }
-  .contact-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
+  .contact-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+  .contact-icon { font-size: 1.8rem; margin-bottom: 0.7rem; }
   .contact-card h3 {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.5rem;
     font-weight: 600;
   }
   .contact-card p, .contact-card a {
@@ -488,45 +439,13 @@
   }
   .contact-card a:hover { color: var(--gold); }
 
-  /* ─── HOURS ─── */
-  .hours-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1px;
-    background: rgba(255,255,255,0.06);
-    margin-top: 2.5rem;
-  }
-  .hour-row {
-    background: var(--charcoal);
-    padding: 1.2rem 1.4rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-  .hour-day {
-    font-size: 0.72rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    font-weight: 600;
-  }
-  .hour-time {
-    font-size: 0.95rem;
-    color: var(--text);
-  }
-  .hour-closed { color: var(--muted); font-style: italic; }
-
-  /* ─── FOOTER ─── */
   footer {
     background: var(--charcoal);
     padding: 2.5rem 2rem;
     text-align: center;
     border-top: 1px solid rgba(255,255,255,0.06);
   }
-  footer p {
-    font-size: 0.78rem;
-    color: var(--muted);
-  }
+  footer p { font-size: 0.78rem; color: var(--muted); }
 
   /* ─── MOBILE ─── */
   @media (max-width: 768px) {
@@ -544,12 +463,9 @@
     }
     .nav-links.open a { font-size: 1.3rem; }
     .hamburger { display: flex; z-index: 101; }
-
     .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .features { grid-template-columns: 1fr; }
-    .contact-grid { grid-template-columns: 1fr; }
     .stats-inner { grid-template-columns: repeat(2, 1fr); }
-
     .gal-item:nth-child(1) { grid-column: span 12; min-height: 220px; }
     .gal-item:nth-child(2) { grid-column: span 6; min-height: 120px; }
     .gal-item:nth-child(3) { grid-column: span 6; min-height: 120px; }
@@ -557,6 +473,7 @@
     .gal-item:nth-child(5) { grid-column: span 6; min-height: 120px; }
     .gal-item:nth-child(6) { grid-column: span 6; min-height: 150px; }
     .gal-item:nth-child(7) { grid-column: span 6; min-height: 150px; }
+    .two-col { grid-template-columns: 1fr !important; gap: 3rem !important; }
   }
 </style>
 </head>
@@ -623,19 +540,19 @@
       <div>
         <p class="section-eyebrow reveal">Our Story</p>
         <h2 class="section-title reveal">The best<br><em style="font-style:italic;color:var(--gold)">neighborhood spot</em><br>on Bluffton Road.</h2>
-        <p class="section-body reveal">Morgan's Tap & Grill opened in the heart of Waynedale in 2021 with one goal — serve great food, pour cold drinks, and make every customer feel at home. From our hand-smashed burgers to our hand-breaded tenderloins, everything is made fresh. No shortcuts.</p>
+        <p class="section-body reveal">Morgan's Tap & Grill opened in the heart of Waynedale in 2021 with one goal — serve great food, pour cold drinks, and make every customer feel at home. From hand-smashed burgers to hand-breaded tenderloins, everything is made fresh.</p>
         <div class="features">
           <div class="feature-card reveal">
             <h4>Smash Burgers</h4>
-            <p>Hand-smashed to order. Crispy edges, juicy center — the way a burger should be.</p>
+            <p>Hand-smashed to order. Crispy edges, juicy center — voted best in Fort Wayne.</p>
           </div>
           <div class="feature-card reveal">
             <h4>Fresh Baskets</h4>
-            <p>Shrimp, chicken, and fish baskets breaded in-house daily. Never frozen.</p>
+            <p>Shrimp, chicken, and fish baskets breaded in-house daily.</p>
           </div>
           <div class="feature-card reveal">
-            <h4>Cold Cocktails</h4>
-            <p>Full bar with craft cocktails and your favorite cold ones on tap.</p>
+            <h4>Full Bar</h4>
+            <p>Craft cocktails, cold drafts, and your favorite drinks poured right.</p>
           </div>
           <div class="feature-card reveal">
             <h4>Good Vibes</h4>
@@ -654,9 +571,9 @@
     <h2 class="section-title reveal">See what's waiting for you.</h2>
     <div class="gallery-mosaic">
       <div class="gal-item reveal"><img src="gmap_7.jpg" alt="Morgan's food"></div>
-      <div class="gal-item reveal"><img src="ig_3.jpg" alt="Burgers at Morgan's" style="object-position:center 30%"></div>
+      <div class="gal-item reveal"><img src="ig_3.jpg" alt="Burgers at Morgan's"></div>
       <div class="gal-item reveal"><img src="gmap_3.jpg" alt="Morgan's interior"></div>
-      <div class="gal-item reveal"><img src="ig_4.jpg" alt="Morgan's kitchen" style="object-position:center 20%"></div>
+      <div class="gal-item reveal"><img src="ig_4.jpg" alt="Morgan's kitchen"></div>
       <div class="gal-item reveal"><img src="gmap_1.jpg" alt="Morgan's food spread"></div>
       <div class="gal-item reveal"><img src="gmap_5.jpg" alt="Food plate"></div>
       <div class="gal-item reveal"><img src="gmap_0.jpg" alt="Morgan's Tap atmosphere"></div>
@@ -671,94 +588,147 @@
     <h2 class="section-title reveal">The Menu</h2>
 
     <div class="menu-tabs">
-      <button class="menu-tab active" data-panel="appetizers">Starters</button>
-      <button class="menu-tab" data-panel="burgers">Burgers</button>
+      <button class="menu-tab active" data-panel="starters">Starters</button>
+      <button class="menu-tab" data-panel="burgers">Burgers & Sandwiches</button>
       <button class="menu-tab" data-panel="baskets">Baskets</button>
-      <button class="menu-tab" data-panel="mains">Mains</button>
+      <button class="menu-tab" data-panel="wings">Wings</button>
     </div>
 
-    <div id="appetizers" class="menu-panel active">
+    <!-- STARTERS — all prices confirmed -->
+    <div id="starters" class="menu-panel active">
       <div class="menu-card">
-        <div class="menu-card-header"><span class="menu-card-name">Fried Pickles</span><span class="menu-card-price">$6.50</span></div>
-        <p class="menu-card-desc">Crispy battered pickle spears, golden fried. Fan favorite.</p>
+        <div class="menu-card-header">
+          <span class="menu-card-name">Fried Pickles</span>
+          <span class="menu-card-price">$6.50</span>
+        </div>
+        <p class="menu-card-desc">Crispy battered pickle spears, golden fried. One of Morgan's most-ordered starters.</p>
       </div>
       <div class="menu-card">
-        <div class="menu-card-header"><span class="menu-card-name">Onion Rings</span><span class="menu-card-price">$7.00</span></div>
-        <p class="menu-card-desc">Hand-battered, thick-cut onion rings. Light, crispy, never greasy.</p>
+        <div class="menu-card-header">
+          <span class="menu-card-name">Onion Rings</span>
+          <span class="menu-card-price">$7.00</span>
+        </div>
+        <p class="menu-card-desc">Hand-battered thick-cut rings. Light, crispy, and never greasy.</p>
       </div>
       <div class="menu-card">
-        <div class="menu-card-header"><span class="menu-card-name">Breaded Mushrooms</span><span class="menu-card-price">Seasonal</span></div>
-        <p class="menu-card-desc">Crispy on the outside, perfectly seasoned. Guests rave about these.</p>
+        <div class="menu-card-header">
+          <span class="menu-card-name">Wings</span>
+          <span class="menu-card-price">$14.00</span>
+        </div>
+        <p class="menu-card-desc">Your choice of sauce or dry rub. Tossed fresh to order — the crowd favorite.</p>
       </div>
       <div class="menu-card">
-        <div class="menu-card-header"><span class="menu-card-name">Chicken Wings</span><span class="menu-card-price">$14.00</span></div>
-        <p class="menu-card-desc">Your choice of sauce or dry rub. Tossed fresh to order.</p>
+        <div class="menu-card-header">
+          <span class="menu-card-name">Breaded Mushrooms</span>
+          <span class="menu-card-price">Ask Us</span>
+        </div>
+        <p class="menu-card-desc">House-breaded mushrooms, perfectly seasoned and golden fried.</p>
       </div>
     </div>
 
+    <!-- BURGERS — $9.50 confirmed for single smash -->
     <div id="burgers" class="menu-panel">
       <div class="menu-card">
-        <div class="menu-card-header"><span class="menu-card-name">Classic Smash Burger</span><span class="menu-card-price">$9.50</span></div>
-        <p class="menu-card-desc">Hand-smashed patty, American cheese, lettuce, tomato, pickles, onion.</p>
+        <div class="menu-card-header">
+          <span class="menu-card-name">Single Smash Burger</span>
+          <span class="menu-card-price">$9.50</span>
+        </div>
+        <p class="menu-card-desc">Hand-smashed patty with American cheese, lettuce, tomato, pickles, onion. Voted best burger in Fort Wayne.</p>
       </div>
       <div class="menu-card">
-        <div class="menu-card-header"><span class="menu-card-name">Double Smash</span><span class="menu-card-price">Market</span></div>
-        <p class="menu-card-desc">Two smashed patties, double cheese, all the fixings. Go big.</p>
+        <div class="menu-card-header">
+          <span class="menu-card-name">Double Smash Burger</span>
+          <span class="menu-card-price">Ask Us</span>
+        </div>
+        <p class="menu-card-desc">Two smashed patties, double cheese, all the fixings. Go big or go home.</p>
       </div>
       <div class="menu-card">
-        <div class="menu-card-header"><span class="menu-card-name">Hand-Breaded Tenderloin</span><span class="menu-card-price">Market</span></div>
-        <p class="menu-card-desc">Voted one of the best tenderloins in Fort Wayne. Pounded, breaded, fried to order.</p>
+        <div class="menu-card-header">
+          <span class="menu-card-name">Triple Smash Burger</span>
+          <span class="menu-card-price">Ask Us</span>
+        </div>
+        <p class="menu-card-desc">Triple-stacked smash patties with American cheese. Not for the faint of heart.</p>
       </div>
       <div class="menu-card">
-        <div class="menu-card-header"><span class="menu-card-name">Patty Melt</span><span class="menu-card-price">Market</span></div>
-        <p class="menu-card-desc">Smashed patty on toasted rye, Swiss, caramelized onions.</p>
+        <div class="menu-card-header">
+          <span class="menu-card-name">Hand-Breaded Tenderloin</span>
+          <span class="menu-card-price">Ask Us</span>
+        </div>
+        <p class="menu-card-desc">Pounded, hand-breaded, fried to order. One of the top tenderloins in Fort Wayne — locals drive across town for it.</p>
       </div>
     </div>
 
+    <!-- BASKETS -->
     <div id="baskets" class="menu-panel">
       <div class="menu-card">
-        <div class="menu-card-header"><span class="menu-card-name">Shrimp Basket</span><span class="menu-card-price">Market</span></div>
+        <div class="menu-card-header">
+          <span class="menu-card-name">Shrimp Basket</span>
+          <span class="menu-card-price">Ask Us</span>
+        </div>
         <p class="menu-card-desc">Hand-breaded jumbo shrimp, served with fries and dipping sauce.</p>
       </div>
       <div class="menu-card">
-        <div class="menu-card-header"><span class="menu-card-name">Chicken Strip Basket</span><span class="menu-card-price">Market</span></div>
-        <p class="menu-card-desc">Thick-cut chicken strips, hand-breaded. Grilled or fried your choice.</p>
+        <div class="menu-card-header">
+          <span class="menu-card-name">Chicken Strip Basket</span>
+          <span class="menu-card-price">Ask Us</span>
+        </div>
+        <p class="menu-card-desc">Thick-cut strips, hand-breaded and fried. Grilled option available.</p>
       </div>
       <div class="menu-card">
-        <div class="menu-card-header"><span class="menu-card-name">Fish Basket</span><span class="menu-card-price">Market</span></div>
+        <div class="menu-card-header">
+          <span class="menu-card-name">Fish Basket</span>
+          <span class="menu-card-price">Ask Us</span>
+        </div>
         <p class="menu-card-desc">Beer-battered fillet, golden fried. Served with fries and tartar.</p>
       </div>
       <div class="menu-card">
-        <div class="menu-card-header"><span class="menu-card-name">All Baskets</span><span class="menu-card-price">—</span></div>
-        <p class="menu-card-desc">Served with seasoned fries. Ask your server for today's market price.</p>
+        <div class="menu-card-header">
+          <span class="menu-card-name">All Baskets</span>
+          <span class="menu-card-price">—</span>
+        </div>
+        <p class="menu-card-desc">Every basket comes with seasoned fries. Call us at (260) 747-0816 for today's prices.</p>
       </div>
     </div>
 
-    <div id="mains" class="menu-panel">
+    <!-- WINGS -->
+    <div id="wings" class="menu-panel">
       <div class="menu-card">
-        <div class="menu-card-header"><span class="menu-card-name">Cocktails</span><span class="menu-card-price">Full Bar</span></div>
-        <p class="menu-card-desc">Craft cocktails, domestic & import beers, wine. Full bar service.</p>
+        <div class="menu-card-header">
+          <span class="menu-card-name">Traditional Wings</span>
+          <span class="menu-card-price">$14.00</span>
+        </div>
+        <p class="menu-card-desc">Classic bone-in wings tossed in your choice of sauce. Buffalo, BBQ, garlic parmesan, and more.</p>
       </div>
       <div class="menu-card">
-        <div class="menu-card-header"><span class="menu-card-name">Weekly Specials</span><span class="menu-card-price">Ask Us</span></div>
-        <p class="menu-card-desc">Rotating daily specials — check Facebook or call us to hear today's.</p>
+        <div class="menu-card-header">
+          <span class="menu-card-name">Sauces & Rubs</span>
+          <span class="menu-card-price">—</span>
+        </div>
+        <p class="menu-card-desc">Ask your server for today's sauce lineup. Made in-house and rotated regularly.</p>
       </div>
       <div class="menu-card">
-        <div class="menu-card-header"><span class="menu-card-name">Kids Menu</span><span class="menu-card-price">Available</span></div>
-        <p class="menu-card-desc">Something for the little ones too. Family-friendly dining always.</p>
+        <div class="menu-card-header">
+          <span class="menu-card-name">Full Bar</span>
+          <span class="menu-card-price">—</span>
+        </div>
+        <p class="menu-card-desc">Craft cocktails, domestic & import beers, wine. Cold drinks poured right.</p>
       </div>
       <div class="menu-card">
-        <div class="menu-card-header"><span class="menu-card-name">Dine-In &amp; Carry Out</span><span class="menu-card-price">—</span></div>
-        <p class="menu-card-desc">Call ahead for carry out. (260) 747-0816</p>
+        <div class="menu-card-header">
+          <span class="menu-card-name">Weekly Specials</span>
+          <span class="menu-card-price">Ask Us</span>
+        </div>
+        <p class="menu-card-desc">Rotating daily specials. Check Facebook or call (260) 747-0816 to hear today's.</p>
       </div>
     </div>
+
   </div>
 </section>
 
 <!-- QUOTE -->
 <div class="quote-section" style="padding:5rem 2rem;">
   <div class="section-inner">
-    <p class="quote-text reveal">The smash burgers are to die for. Service was incredible. One of the best tenderloins in Fort Wayne.</p>
+    <p class="quote-text reveal">The smash burgers are to die for. One of the best tenderloins in Fort Wayne. Service was incredible.</p>
     <p class="quote-attr reveal">— <span>Google Reviews</span> · 4.7★ · 700+ ratings</p>
   </div>
 </div>
@@ -766,10 +736,10 @@
 <!-- HOURS + CONTACT -->
 <section id="contact">
   <div class="section-inner">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;">
+    <div class="two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;">
       <div>
-        <p class="section-eyebrow reveal">Come See Us</p>
-        <h2 class="section-title reveal">Hours & Location</h2>
+        <p class="section-eyebrow reveal">When We're Open</p>
+        <h2 class="section-title reveal">Hours</h2>
         <div class="hours-grid reveal">
           <div class="hour-row"><span class="hour-day">Monday</span><span class="hour-time">11am – 9pm</span></div>
           <div class="hour-row"><span class="hour-day">Tuesday</span><span class="hour-time">11am – 9pm</span></div>
@@ -783,13 +753,11 @@
       <div>
         <p class="section-eyebrow reveal">Get In Touch</p>
         <h2 class="section-title reveal">Find Us</h2>
-        <div class="contact-grid reveal" style="grid-template-columns:1fr;gap:1rem;">
+        <div class="contact-cards reveal">
           <div class="contact-card">
             <div class="contact-icon">📍</div>
             <h3>Address</h3>
-            <a href="https://maps.google.com/?q=8421+Bluffton+Rd+Fort+Wayne+IN" target="_blank" rel="noopener">
-              8421 Bluffton Rd<br>Fort Wayne, IN 46809<br><span style="color:var(--gold);font-size:0.8rem;">Waynedale Neighborhood</span>
-            </a>
+            <a href="https://maps.google.com/?q=8421+Bluffton+Rd+Fort+Wayne+IN+46809" target="_blank" rel="noopener">8421 Bluffton Rd<br>Fort Wayne, IN 46809</a>
           </div>
           <div class="contact-card">
             <div class="contact-icon">📞</div>
@@ -810,15 +778,13 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Morgan's Tap & Grill · 8421 Bluffton Rd, Fort Wayne, IN 46809 · <a href="tel:2607470816" style="color:var(--gold);">(260) 747-0816</a></p>
+  <p>© 2026 Morgan's Tap & Grill &nbsp;·&nbsp; 8421 Bluffton Rd, Fort Wayne, IN 46809 &nbsp;·&nbsp; <a href="tel:2607470816" style="color:var(--gold);">(260) 747-0816</a></p>
 </footer>
 
 <script>
-  // Nav scroll
+  // Scrolled nav
   const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
-  });
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
 
   // Hamburger
   const hamburger = document.getElementById('hamburger');
@@ -827,11 +793,11 @@
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
   // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  reveals.forEach(r => observer.observe(r));
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+    { threshold: 0.1 }
+  );
+  document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
 
   // Menu tabs
   document.querySelectorAll('.menu-tab').forEach(tab => {
